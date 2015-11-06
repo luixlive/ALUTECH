@@ -44,15 +44,21 @@ U08 ADC_u08fnDriverInit(){
 	//ADC0_SC3 |= ADC_SC3_AVGE_MASK;			/* Hardware Average Enable (Hardware average function disabled) */
 	ADC0_SC3 |= ADC_SC3_AVGS(0);				/* Hardware Average Select (No effects) */
 	ADC0_SC3 |= ADC_SC3_CAL_MASK;				/* Calibration */
-	while ((ADC0_SC3 & ADC_SC3_CAL_MASK) != 0)
+	while ((ADC0_SC3 & ADC_SC3_CAL_MASK) != 0);
 	if ((ADC0_SC3 & ADC_SC3_CALF_MASK) != 0)
 		return 0;
+	ADC0_SC1A &= (~ADC_SC1_COCO_MASK);			/* Escribimos en el COCO para que comience a leer */
 	return 1;
 }
 
 U16 ADC_u16fnReadValue(){
+	
+	//TODO NO FUNCIONAL
+	
+	static U16 u16UltimoValor = 0;
+	//while ((ADC0_SC1A & ADC_SC1_COCO_MASK) != ADC_SC1_COCO_MASK);
+	u16UltimoValor = ADC0_SC2 & ADC_SC2_ADACT_MASK;
+	u16UltimoValor = ADC0_RA;
 	ADC0_SC1A &= (~ADC_SC1_COCO_MASK);
-	while (!((ADC0_SC1A & ADC_SC1_COCO_MASK) == ADC_SC1_COCO_MASK));	//Actualizar si se modifica la configuración ADC0_SC1A
-  	U16 u16ADC_value = ADC0_RA;
-	return u16ADC_value;
+	return u16UltimoValor;
 }

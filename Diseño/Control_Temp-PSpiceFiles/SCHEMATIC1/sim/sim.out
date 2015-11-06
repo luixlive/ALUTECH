@@ -1,0 +1,210 @@
+
+**** 11/06/15 13:23:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\Control_Temp-PSpiceFiles\SCHEMATIC1\sim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\LUISALFONSO\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CONTROL_TEMP
+V_V6         N11777 0 .3
+R_R19         N11777 N09527  100k TC=0,0 
+R_R20         N09527 0  100k TC=0,0 
+X_U5         N09527 N09889 N12564 N12262 N09877 uA741
+R_R22         0 N09617  560 TC=0,0 
+R_R21         N09735 N09617  10k TC=0,0 
+V_V9         N09735 0 5
+R_R24         N09889 N09877  100k TC=0,0 
+R_R25         N09617 N09889  100k TC=0,0 
+X_U6         0 N10491 N10650 N13349 N10553 uA741
+R_R26         N09877 N10491  560 TC=0,0 
+R_R27         N10491 N10553  100k TC=0,0 
+V_V10         N10650 0 9
+V_V12         0 N12262 9
+V_V13         N12564 0 9
+V_V14         0 N13349 9
+X_D1         N13495 N10553 awb1n4148 PARAMS:                
+R_R28         0 N13495  1k TC=0,0 
+
+**** RESUMING sim.cir ****
+.END
+
+**** 11/06/15 13:23:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\Control_Temp-PSpiceFiles\SCHEMATIC1\sim.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.dx         X_U6.dx         X_D1.model22    
+          IS  800.000000E-18  800.000000E-18    1.000000E-09 
+           N                                    1.55         
+          BV                                  120            
+         IBV                                    1            
+          RS    1               1                .5          
+          TT                                    5.000000E-09 
+         CJO                                    1.850000E-12 
+          VJ                                     .65         
+           M                                     .18         
+
+
+**** 11/06/15 13:23:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\Control_Temp-PSpiceFiles\SCHEMATIC1\sim.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.qx         X_U6.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 11/06/15 13:23:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\Control_Temp-PSpiceFiles\SCHEMATIC1\sim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09527)     .1460 (N09617)     .2645 (N09735)    5.0000 (N09877)     .0355     
+
+(N09889)     .1460 (N10491) 55.37E-06 (N10553)   -6.3229 (N10650)    9.0000     
+
+(N11777)     .3000 (N12262)   -9.0000 (N12564)    9.0000 (N13349)   -9.0000     
+
+(N13495)   -5.6964 (X_U5.6)-4.245E-06 (X_U5.7)     .0386 (X_U5.8)     .0386     
+
+(X_U5.9)    0.0000 (X_U6.6) 679.6E-06 (X_U6.7)   -6.6109 (X_U6.8)   -6.6109     
+
+(X_U6.9)    0.0000 (X_U5.10)    -.4617                   (X_U5.11)    8.9603    
+
+(X_U5.12)    8.9603                   (X_U5.13)    -.4478                       
+
+(X_U5.14)    -.4478                   (X_U5.53)    8.0000                       
+
+(X_U5.54)   -8.0000                   (X_U5.90)     .0622                       
+
+(X_U5.91)   40.0000                   (X_U5.92)  -40.0000                       
+
+(X_U5.99)    0.0000                   (X_U6.10)    -.6076                       
+
+(X_U6.11)    8.9603                   (X_U6.12)    8.9604                       
+
+(X_U6.13)    -.5938                   (X_U6.14)    -.5938                       
+
+(X_U6.53)    8.0000                   (X_U6.54)   -8.0000                       
+
+(X_U6.90)   -5.7597                   (X_U6.91)   40.0000                       
+
+(X_U6.92)  -40.0000                   (X_U6.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -1.540E-06
+    V_V9        -4.735E-04
+    V_V10       -1.006E-03
+    V_V12       -1.006E-03
+    V_V13       -1.006E-03
+    V_V14       -1.006E-03
+    X_U5.vb     -4.245E-11
+    X_U5.vc      7.965E-12
+    X_U5.ve      8.037E-12
+    X_U5.vlim    6.220E-05
+    X_U5.vlp    -3.994E-11
+    X_U5.vln    -4.007E-11
+    X_U6.vb      6.796E-09
+    X_U6.vc      1.432E-11
+    X_U6.ve      1.679E-12
+    X_U6.vlim   -5.760E-03
+    X_U6.vlp    -4.576E-11
+    X_U6.vln    -3.424E-11
+
+    TOTAL POWER DISSIPATION   3.86E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/06/15 13:23:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim"  [ C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\Control_Temp-PSpiceFiles\SCHEMATIC1\sim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

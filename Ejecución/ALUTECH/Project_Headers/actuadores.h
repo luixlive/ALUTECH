@@ -11,31 +11,19 @@
 #include "mytypes.h"
 
 /*
- * u08fnIluminacionEncendida: informa al usuario si el LED indicado está encendido.
+ * u16fnValorIluminacion: informa al usuario el valor actual del LED que indique.
  * param id_led: id del LED del que se desea obtener la información.
- * return: 1 si está encendido, 0 de otro modo.
+ * return: valor en el que se encuentra el LED.
  */
-U08 u08fnIluminacionEncendida(U08 u08Id_led);
-
-/*
- * vdfnEncenderIluminacion: enciende el LED indicado por el usuario.
- * id_led: id del LED que se desea encender.
- */
-void vdfnEncenderIluminacion(U08 u08Id_led);
-
-/*
- * vdfnApagarIluminacion: apaga el LED indicado por el usuario.
- * id_led: id del LED que se desea apagar.
- */
-void vdfnApagarIluminacion(U08 u08Id_led);
+U16 u16fnValorIluminacion();
 
 /*
  * vdfnCambiarIluminacion: modifica la intensidad de brillo del LED indicado.
  * u08Cambio: valor del cambio a realizar en la iluminación.
  * id_led: id del LED que se desea modificar.
  */
-void vdfnCambiarIluminacion(S16 u08Cambio, U08 u08Id_led);
+void vdfnCambiarIluminacion(S16 u16Cambio);
 
-static U08 u08aEstadoIluminacion[];
+static U16 u16EstadoIluminacion;
 
 #endif /* ACTUADORES_H_ */

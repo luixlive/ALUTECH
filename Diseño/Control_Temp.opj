@@ -1,0 +1,73 @@
+(ExpressProject "Control_Temp"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\control_temp.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\control_temp-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\control_temp-pspicefiles\schematic1\sim.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\control_temp-pspicefiles\schematic1\sim.sim"
+        (DisplayName "SCHEMATIC1-sim")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (LM34D/SO
+      (FullPartName "LM34D/SO.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\MISCLINEAR.OLB")
+      (DeviceIndex "0"))
+    ("MOTOR AC"
+      (FullPartName "MOTOR AC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\ELECTROMECHANICAL.OLB")
+      (DeviceIndex "0"))
+    (1N4148
+      (FullPartName "1N4148.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVALAA.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\control_temp.dsn")
+      (Path "Design Resources"
+         "C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\control_temp.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\control_temp.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 327"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 156 1264 156 522")
+        (Scroll "266 264")
+        (Zoom "174")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\LUISALFONSO\BOX SYNC\UNIVERSIDAD\5_SEMESTRE\CONTROL_TEMP.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))

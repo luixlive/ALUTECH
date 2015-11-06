@@ -1,0 +1,19 @@
+* source CONTROL_VENTANA-LLUVIA
+V_V1         N00104 0 5Vdc
+X_U1         N00428 0 N00112 N00213 N00104 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+R_R1         N00112 0  1k TC=0,0 
+R_R2         N00213 0  1k TC=0,0 
+X_U4         0 N00428 Sw_tOpen PARAMS: tOpen=0.005 ttran=1u Rclosed=0.01
++  Ropen=1Meg
