@@ -36,6 +36,6 @@ int main(void)
  * de iluminacion y el real, y se encarga de modificar la iluminacion según sea necesario.
  */
 void vdfnControlIluminacion(U16 u16Real, U16 u16Deseada){
-	U16 u16Error = u16Deseada - u16Real;
-	vdfnCambiarIluminacion(u16Error);
+	S32 s32Error = u16Deseada - u16Real;
+	vdfnCambiarIluminacion(s32Error);
 }

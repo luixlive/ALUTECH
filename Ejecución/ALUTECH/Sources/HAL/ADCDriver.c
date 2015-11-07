@@ -17,6 +17,7 @@
 U08 ADC_u08fnDriverInit(){
 	SIM_SCGC6 |= SIM_SCGC6_ADC0_MASK;			/* ADC0 Clock Gate Control (Clock enabled) */
 	
+	ADC0_SC1A &= 0;
 	//ADC0_SC1A |= ADC_SC1_AIEN_MASK;			/* Interrupt Enable (Conversion complete interrupt disabled) */
 	//ADC0_SC1A |= ADC_SC1_DIFF_MASK;			/* Differential Mode Enable (Single-ended conversions and input channels) */
 	ADC0_SC1A |= ADC_SC1_ADCH(0);				/* Input channel select (DADP0 is selected as input) */
