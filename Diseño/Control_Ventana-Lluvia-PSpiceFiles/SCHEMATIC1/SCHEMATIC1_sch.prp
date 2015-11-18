@@ -2,8 +2,135 @@
     ("devices"
         ("VDC")
         ("Relay_SPDT_phy")
-        ("R")
-        ("Sw_tOpen")
+        ("awb1n4148"
+            ("info"
+                ("spice_dsg"	"X")
+                ("port_order"
+                    ("AN")
+                    ("CAT")
+                )
+            )
+            ("model_params"
+                ("level_0"
+                    ("IS"
+                        ("value"	"1.0E-9")
+                    )
+                    ("RS"
+                        ("value"	"0.5")
+                    )
+                    ("N"
+                        ("value"	"1.55")
+                    )
+                    ("TT"
+                        ("value"	"5.0E-9")
+                    )
+                    ("CJO"
+                        ("value"	"1.85E-12")
+                    )
+                    ("VJ"
+                        ("value"	"0.65")
+                    )
+                    ("M"
+                        ("value"	"0.18")
+                    )
+                    ("EG"
+                        ("value"	"1.11")
+                    )
+                    ("XTI"
+                        ("value"	"3.0")
+                    )
+                    ("KF"
+                        ("value"	"0.0")
+                    )
+                    ("AF"
+                        ("value"	"1.0")
+                    )
+                    ("FC"
+                        ("value"	"0.5")
+                    )
+                    ("BV"
+                        ("value"	"120")
+                    )
+                    ("IBV"
+                        ("value"	"1.0")
+                    )
+                    ("IC"
+                        ("value"	"0")
+                    )
+                    ("STATE"
+                        ("value"	"0")
+                    )
+                    ("AREA"
+                        ("value"	"0")
+                    )
+                )
+            )
+            ("smoke"
+                ("max_ops_desc"
+                    ("IF"
+                        ("description"	"Max forward current")
+                        ("unit"	"A")
+                    )
+                    ("VR"
+                        ("description"	"Peak reverse voltage")
+                        ("unit"	"V")
+                    )
+                    ("PDM"
+                        ("description"	"Max pwr dissipation")
+                        ("unit"	"W")
+                    )
+                    ("TJ"
+                        ("description"	"Max junction temp")
+                        ("unit"	"C")
+                    )
+                    ("RJC"
+                        ("description"	"J-C thermal resist")
+                        ("unit"	"C/W")
+                    )
+                    ("RCA"
+                        ("description"	"C-A thermal resist")
+                        ("unit"	"C/W")
+                    )
+                )
+                ("pre_smoke"
+                    ("TERM_AN"	"-1")
+                    ("NODE_AN"	"AN")
+                    ("NODE_CAT"	"CAT")
+                    ("DERATE_TYPE"	"DIODE")
+                )
+                ("max_ops"
+                    ("RCA"	"RCA")
+                )
+                ("smoke_tests"
+                    ("IF"
+                        ("test"	"current_test")
+                        ("term"	"TERM_AN")
+                    )
+                    ("PDM"
+                        ("test"	"power_test")
+                    )
+                    ("TJ"
+                        ("test"	"temp_null_test")
+                    )
+                    ("VR"
+                        ("test"	"voltage_test")
+                        ("nodes"
+                            ("NODE_CAT")
+                            ("NODE_AN")
+                        )
+                    )
+                )
+                ("device_max_ops"
+                    ("IF"	"200e-03")
+                    ("VR"	"75")
+                    ("TJ"	"175")
+                    ("PDM"	"1.00e+00")
+                    ("RJC"	"150")
+                    ("RCA"	"100")
+                )
+            )
+        )
+        ("Sw_tClose")
     )
     ("instances"
         ("V1"
@@ -16,7 +143,7 @@
                     ("pspice_param"	"DC")
                 )
                 ("BiasValue Power"
-                    ("value"	"-25.00mW")
+                    ("value"	"-2.488W")
                     ("pspice_param"	"BiasValue Power")
                 )
             )
@@ -75,113 +202,235 @@
                     ("pspice_param"	"damping")
                 )
                 ("BiasValue Power"
-                    ("value"	"1.500uW")
+                    ("value"	"12.38mW")
                     ("pspice_param"	"BiasValue Power")
                 )
             )
         )
-        ("R1"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R1")
+        ("V2"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V2")
             ("level"	"0")
             ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
-                    ("pspice_param"	"VALUE")
+                ("DC"
+                    ("value"	"5Vdc")
+                    ("pspice_param"	"DC")
                 )
                 ("BiasValue Power"
-                    ("value"	"2.500pW")
+                    ("value"	"0W")
                     ("pspice_param"	"BiasValue Power")
-                )
-                ("TC2"
-                    ("value"	"0")
-                    ("pspice_param"	"TC2")
-                )
-                ("TC1"
-                    ("value"	"0")
-                    ("pspice_param"	"TC1")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
                 )
             )
         )
-        ("R2"
-            ("device_name"	"R")
-            ("pspice_path"	"R_R2")
+        ("U3"
+            ("device_name"	"Relay_SPDT_phy")
+            ("pspice_path"	"X_U3")
             ("level"	"0")
             ("model_params"
-                ("VALUE"
-                    ("value"	"1k")
-                    ("pspice_param"	"VALUE")
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
                 )
                 ("BiasValue Power"
-                    ("value"	"25.00mW")
+                    ("value"	"2.475W")
                     ("pspice_param"	"BiasValue Power")
-                )
-                ("TC2"
-                    ("value"	"0")
-                    ("pspice_param"	"TC2")
-                )
-                ("TC1"
-                    ("value"	"0")
-                    ("pspice_param"	"TC1")
-                )
-                ("POWER"
-                    ("value"	"RMAX")
-                    ("pspice_param"	"POWER")
-                )
-                ("MAX_TEMP"
-                    ("value"	"RTMAX")
-                    ("pspice_param"	"MAX_TEMP")
-                )
-                ("SLOPE"
-                    ("value"	"RSMAX")
-                    ("pspice_param"	"SLOPE")
-                )
-                ("VOLTAGE"
-                    ("value"	"RVMAX")
-                    ("pspice_param"	"VOLTAGE")
-                )
-                ("TOLERANCE"
-                    ("value"	"")
-                    ("pspice_param"	"TOLERANCE")
-                )
-                ("DIST"
-                    ("value"	"FLAT")
-                    ("pspice_param"	"DIST")
                 )
             )
         )
         ("U4"
-            ("device_name"	"Sw_tOpen")
+            ("device_name"	"Relay_SPDT_phy")
             ("pspice_path"	"X_U4")
             ("level"	"0")
             ("model_params"
-                ("TOPEN"
-                    ("value"	"0.005")
-                    ("pspice_param"	"tOpen")
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
+                )
+                ("BiasValue Power"
+                    ("value"	"250.0nW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("D1"
+            ("device_name"	"awb1n4148")
+            ("pspice_path"	"X_D1")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("RCA"
+                    ("value"	"DEF")
+                    ("pspice_param"	"RCA")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+                ("STATE"
+                    ("value"	"ON")
+                    ("pspice_param"	"STATE")
+                )
+            )
+        )
+        ("D2"
+            ("device_name"	"awb1n4148")
+            ("pspice_path"	"X_D2")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("RCA"
+                    ("value"	"DEF")
+                    ("pspice_param"	"RCA")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+                ("STATE"
+                    ("value"	"ON")
+                    ("pspice_param"	"STATE")
+                )
+            )
+        )
+        ("U5"
+            ("device_name"	"Sw_tClose")
+            ("pspice_path"	"X_U5")
+            ("level"	"0")
+            ("model_params"
+                ("TCLOSE"
+                    ("value"	"0")
+                    ("pspice_param"	"tClose")
+                )
+                ("TTRAN"
+                    ("value"	"1u")
+                    ("pspice_param"	"ttran")
+                )
+                ("RCLOSED"
+                    ("value"	"0.01")
+                    ("pspice_param"	"Rclosed")
+                )
+                ("ROPEN"
+                    ("value"	"1Meg")
+                    ("pspice_param"	"Ropen")
+                )
+                ("BiasValue Power"
+                    ("value"	"25.00uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U6"
+            ("device_name"	"Sw_tClose")
+            ("pspice_path"	"X_U6")
+            ("level"	"0")
+            ("model_params"
+                ("TCLOSE"
+                    ("value"	"0")
+                    ("pspice_param"	"tClose")
                 )
                 ("TTRAN"
                     ("value"	"1u")
@@ -197,6 +446,394 @@
                 )
                 ("BiasValue Power"
                     ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U7"
+            ("device_name"	"Sw_tClose")
+            ("pspice_path"	"X_U7")
+            ("level"	"0")
+            ("model_params"
+                ("TCLOSE"
+                    ("value"	"0")
+                    ("pspice_param"	"tClose")
+                )
+                ("TTRAN"
+                    ("value"	"1u")
+                    ("pspice_param"	"ttran")
+                )
+                ("RCLOSED"
+                    ("value"	"0.01")
+                    ("pspice_param"	"Rclosed")
+                )
+                ("ROPEN"
+                    ("value"	"1Meg")
+                    ("pspice_param"	"Ropen")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U8"
+            ("device_name"	"Relay_SPDT_phy")
+            ("pspice_path"	"X_U8")
+            ("level"	"0")
+            ("model_params"
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U9"
+            ("device_name"	"Relay_SPDT_phy")
+            ("pspice_path"	"X_U9")
+            ("level"	"0")
+            ("model_params"
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("D4"
+            ("device_name"	"awb1n4148")
+            ("pspice_path"	"X_D4")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("RCA"
+                    ("value"	"DEF")
+                    ("pspice_param"	"RCA")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+                ("STATE"
+                    ("value"	"ON")
+                    ("pspice_param"	"STATE")
+                )
+            )
+        )
+        ("D3"
+            ("device_name"	"awb1n4148")
+            ("pspice_path"	"X_D3")
+            ("level"	"0")
+            ("tol_on_off"	"ON")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"1.579uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("RCA"
+                    ("value"	"DEF")
+                    ("pspice_param"	"RCA")
+                )
+                ("TOL_ON_OFF"
+                    ("value"	"ON")
+                    ("pspice_param"	"TOL_ON_OFF")
+                )
+                ("IC"
+                    ("value"	"")
+                    ("pspice_param"	"IC")
+                )
+                ("STATE"
+                    ("value"	"ON")
+                    ("pspice_param"	"STATE")
+                )
+            )
+        )
+        ("U12"
+            ("device_name"	"Relay_SPDT_phy")
+            ("pspice_path"	"X_U12")
+            ("level"	"0")
+            ("model_params"
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
+                )
+                ("BiasValue Power"
+                    ("value"	"250.2nW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U10"
+            ("device_name"	"Sw_tClose")
+            ("pspice_path"	"X_U10")
+            ("level"	"0")
+            ("model_params"
+                ("TCLOSE"
+                    ("value"	"0")
+                    ("pspice_param"	"tClose")
+                )
+                ("TTRAN"
+                    ("value"	"1u")
+                    ("pspice_param"	"ttran")
+                )
+                ("RCLOSED"
+                    ("value"	"0.01")
+                    ("pspice_param"	"Rclosed")
+                )
+                ("ROPEN"
+                    ("value"	"1Meg")
+                    ("pspice_param"	"Ropen")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U11"
+            ("device_name"	"Sw_tClose")
+            ("pspice_path"	"X_U11")
+            ("level"	"0")
+            ("model_params"
+                ("TCLOSE"
+                    ("value"	"0")
+                    ("pspice_param"	"tClose")
+                )
+                ("TTRAN"
+                    ("value"	"1u")
+                    ("pspice_param"	"ttran")
+                )
+                ("RCLOSED"
+                    ("value"	"0.01")
+                    ("pspice_param"	"Rclosed")
+                )
+                ("ROPEN"
+                    ("value"	"1Meg")
+                    ("pspice_param"	"Ropen")
+                )
+                ("BiasValue Power"
+                    ("value"	"21.73uW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("U13"
+            ("device_name"	"Relay_SPDT_phy")
+            ("pspice_path"	"X_U13")
+            ("level"	"0")
+            ("model_params"
+                ("R_COIL"
+                    ("value"	"10")
+                    ("pspice_param"	"R_coil")
+                )
+                ("L_COIL"
+                    ("value"	"5mH")
+                    ("pspice_param"	"L_coil")
+                )
+                ("R_OPEN"
+                    ("value"	"100MEG")
+                    ("pspice_param"	"R_open")
+                )
+                ("R_CLOSE"
+                    ("value"	".05")
+                    ("pspice_param"	"R_close")
+                )
+                ("TURNS"
+                    ("value"	"100")
+                    ("pspice_param"	"turns")
+                )
+                ("ARM_MASS"
+                    ("value"	"0.5")
+                    ("pspice_param"	"arm_mass")
+                )
+                ("SPR"
+                    ("value"	"40")
+                    ("pspice_param"	"spr")
+                )
+                ("MINP"
+                    ("value"	"1")
+                    ("pspice_param"	"minp")
+                )
+                ("MAXP"
+                    ("value"	"5")
+                    ("pspice_param"	"maxp")
+                )
+                ("DRAG"
+                    ("value"	"1")
+                    ("pspice_param"	"drag")
+                )
+                ("LIM_K"
+                    ("value"	"1e6")
+                    ("pspice_param"	"lim_k")
+                )
+                ("DAMPING"
+                    ("value"	"1e3")
+                    ("pspice_param"	"damping")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+            )
+        )
+        ("V3"
+            ("device_name"	"VDC")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"5Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-23.56uW")
                     ("pspice_param"	"BiasValue Power")
                 )
             )

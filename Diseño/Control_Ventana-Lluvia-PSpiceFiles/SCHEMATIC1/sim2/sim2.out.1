@@ -1,0 +1,388 @@
+
+**** 11/11/15 17:30:59 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\Control_Ventana-Lluvia-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\LUISALFONSO\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CONTROL_VENTANA-LLUVIA
+V_V1         N00104 0 5Vdc
+X_U1         N02050 0 N01400 N01388 N00104 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+V_V2         N00930 0 5Vdc
+X_U3         N01388 0 N01660 N01648 N00104 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+X_U4         N01400 0 N01660 N01648 0 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+X_D1         N02479 N02149 awb1n4148 PARAMS:                
+X_D2         N02313 N02153 awb1n4148 PARAMS:                
+X_U5         N00104 N02050 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U6         N02153 N02309 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U7         N02149 N02305 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U8         N02305 0 N02479 0 N04998 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+X_U9         N02309 0 N02313 0 N04980 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+X_D4         0 N07623 awb1n4148 PARAMS:                
+X_D3         N07769 N07617 awb1n4148 PARAMS:                
+X_U12         N07697 0 N07769 0 N07879 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+X_U10         N07623 N07703 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U11         N07617 N07697 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U13         N07703 0 0 0 N07861 Relay_Spdt_Phy PARAMS:
++ R_coil=10
++ L_coil=5mH
++ R_open=100MEG
++ R_close=.05
++ turns=100
++ arm_mass=0.5
++ spr=40
++ minp=1
++ maxp=5
++ drag=1
++ lim_k=1e6
++ damping=1e3
+V_V3         N07769 0 5Vdc
+R_R1         N07861 N07879  10k TC=0,0 
+
+**** RESUMING sim2.cir ****
+.END
+
+**** 11/11/15 17:30:59 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\Control_Ventana-Lluvia-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.model22    X_D2.model22    X_D4.model22    X_D3.model22    
+          IS    1.000000E-09    1.000000E-09    1.000000E-09    1.000000E-09 
+           N    1.55            1.55            1.55            1.55         
+          BV  120             120             120             120            
+         IBV    1               1               1               1            
+          RS     .5              .5              .5              .5          
+          TT    5.000000E-09    5.000000E-09    5.000000E-09    5.000000E-09 
+         CJO    1.850000E-12    1.850000E-12    1.850000E-12    1.850000E-12 
+          VJ     .65             .65             .65             .65         
+           M     .18             .18             .18             .18         
+
+
+**** 11/11/15 17:30:59 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\Control_Ventana-Lluvia-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.smod_no    X_U1.smod_nc    X_U3.smod_no    X_U3.smod_nc    
+         RON     .05             .05             .05             .05         
+        ROFF  100.000000E+06  100.000000E+06  100.000000E+06  100.000000E+06 
+         VON    1               0               1               0            
+        VOFF     .99             .01             .99             .01         
+
+
+               X_U4.smod_no    X_U4.smod_nc    X_U5.Smod       X_U6.Smod       
+         RON     .05             .05             .01             .01         
+        ROFF  100.000000E+06  100.000000E+06    1.000000E+06    1.000000E+06 
+         VON    1               0               1               1            
+        VOFF     .99             .01            0               0            
+
+
+               X_U7.Smod       X_U8.smod_no    X_U8.smod_nc    X_U9.smod_no    
+         RON     .01             .05             .05             .05         
+        ROFF    1.000000E+06  100.000000E+06  100.000000E+06  100.000000E+06 
+         VON    1               1               0               1            
+        VOFF    0                .99             .01             .99         
+
+
+               X_U9.smod_nc    X_U12.smod_no   X_U12.smod_nc   X_U10.Smod      
+         RON     .05             .05             .05             .01         
+        ROFF  100.000000E+06  100.000000E+06  100.000000E+06    1.000000E+06 
+         VON    0               1               0               1            
+        VOFF     .01             .99             .01            0            
+
+
+               X_U11.Smod      X_U13.smod_no   X_U13.smod_nc   
+         RON     .01             .05             .05         
+        ROFF    1.000000E+06  100.000000E+06  100.000000E+06 
+         VON    1               1               0            
+        VOFF    0                .99             .01         
+
+
+**** 11/11/15 17:30:59 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\Control_Ventana-Lluvia-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00104)    5.0000 (N00930)    5.0000 (N01388)    4.9751 (N01400) 500.0E-09     
+
+(N01648) 2.500E-09 (N01660)    5.0000 (N02050) 50.00E-06 (N02149)    0.0000     
+
+(N02153)    0.0000 (N02305)    0.0000 (N02309)    0.0000 (N02313)    0.0000     
+
+(N02479)    0.0000 (N04980)    0.0000 (N04998)    0.0000 (N07617)    4.6614     
+
+(N07623)    0.0000 (N07697) 46.61E-06 (N07703)    0.0000 (N07769)    5.0000     
+
+(N07861) 12.50E-15 (N07879) 2.500E-09 (X_U5.3)    0.0000 (X_U6.3)    0.0000     
+
+(X_U7.3)    0.0000 (X_U1.a1) 50.00E-06                   (X_U1.a2)-6.776E-21    
+
+(X_U1.v0)    0.0000                   (X_U10.3)    0.0000                       
+
+(X_U11.3)    0.0000                   (X_U3.a1)    4.9751                       
+
+(X_U3.a2) 888.2E-18                   (X_U3.v0)    0.0000                       
+
+(X_U4.a1) 500.0E-09                   (X_U4.a2)    0.0000                       
+
+(X_U4.v0)    0.0000                   (X_U8.a1)    0.0000                       
+
+(X_U8.a2)    0.0000                   (X_U8.v0)    0.0000                       
+
+(X_U9.a1)    0.0000                   (X_U9.a2)    0.0000                       
+
+(X_U9.v0)    0.0000                   (X_U1.dis)-40.00E-06                      
+
+(X_U1.vel)-40.12E-15                  (X_U12.a1) 46.61E-06                      
+
+(X_U12.a2)    0.0000                  (X_U12.v0)    0.0000                      
+
+(X_U13.a1)    0.0000                  (X_U13.a2)    0.0000                      
+
+(X_U13.v0)    0.0000                  (X_U3.dis)    1.1237                      
+
+(X_U3.vel) 1.127E-09                  (X_U4.dis)-40.00E-06                      
+
+(X_U4.vel)-40.12E-15                  (X_U8.dis)-40.00E-06                      
+
+(X_U8.vel)-40.12E-15                  (X_U9.dis)-40.00E-06                      
+
+(X_U9.vel)-40.19E-15                  (X_U12.dis)-40.00E-06                     
+
+(X_U12.vel)-40.12E-15                 (X_U13.dis)-40.00E-06                     
+
+(X_U13.vel)-40.12E-15                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.975E-01
+    V_V2         0.000E+00
+    V_V3        -4.711E-06
+    X_U1.v_winding   5.000E-06
+    X_U3.v_winding   4.975E-01
+    X_U4.v_winding   5.000E-08
+    X_U5.V1      0.000E+00
+    X_U6.V1      0.000E+00
+    X_U7.V1      0.000E+00
+    X_U8.v_winding   0.000E+00
+    X_U9.v_winding   0.000E+00
+    X_U12.v_winding   4.661E-06
+    X_U10.V1     0.000E+00
+    X_U11.V1     0.000E+00
+    X_U13.v_winding   0.000E+00
+
+    TOTAL POWER DISSIPATION   2.49E+00  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  90.10E-09.
+         Time step =  66.20E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1.v0)                =   -1.024KV  \         0V
+    V(X_U3.v0)                =         0V  \    128.00V
+    V(X_U8.v0)                =         0V  \     32.00V
+    V(X_U13.v0)               =         0V  \     32.00V
+
+  These supply currents failed to converge:
+
+    I(V_V3)                   =   -6.737uA  \   -6.745uA
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00104)    5.0000 (N00930)    5.0000 (N01388)    4.9751 (N01400) 500.0E-09     
+
+(N01648) 2.500E-09 (N01660)    5.0000 (N02050)     .2820 (N02149)    0.0000     
+
+(N02153)    0.0000 (N02305)    0.0000 (N02309)    0.0000 (N02313)    0.0000     
+
+(N02479)    0.0000 (N04980)    0.0000 (N04998)    0.0000 (N07617)    4.6518     
+
+(N07623)    0.0000 (N07697)     .2608 (N07703)    0.0000 (N07769)    5.0000     
+
+(N07861) 12.50E-15 (N07879) 2.500E-09 (X_U5.3)     .0901 (X_U6.3)     .0901     
+
+(X_U7.3)     .0901 (X_U1.a1)     .2820                   (X_U1.a2)     .2819    
+
+(X_U1.v0)-1024.0000                   (X_U10.3)     .0901                       
+
+(X_U11.3)     .0901                   (X_U3.a1)    4.9751                       
+
+(X_U3.a2)-4.441E-15                   (X_U3.v0)    0.0000                       
+
+(X_U4.a1) 500.0E-09                   (X_U4.a2) 3.769E-15                       
+
+(X_U4.v0)    0.0000                   (X_U8.a1)    0.0000                       
+
+(X_U8.a2)    0.0000                   (X_U8.v0)    0.0000                       
+
+(X_U9.a1)    0.0000                   (X_U9.a2)    0.0000                       
+
+(X_U9.v0)    0.0000                   (X_U1.dis)-40.00E-06                      
+
+(X_U1.vel)-10.96E-15                  (X_U12.a1)     .2608                      
+
+(X_U12.a2)     .2607                  (X_U12.v0)    0.0000                      
+
+(X_U13.a1)    0.0000                  (X_U13.a2)    0.0000                      
+
+(X_U13.v0)    0.0000                  (X_U3.dis)    1.1237                      
+
+(X_U3.vel) 1.127E-09                  (X_U4.dis)-40.00E-06                      
+
+(X_U4.vel)-40.12E-15                  (X_U8.dis)-40.00E-06                      
+
+(X_U8.vel)-40.12E-15                  (X_U9.dis)-40.00E-06                      
+
+(X_U9.vel)-40.19E-15                  (X_U12.dis)-40.00E-06                     
+
+(X_U12.vel)-14.91E-15                 (X_U13.dis)-40.00E-06                     
+
+(X_U13.vel)-40.12E-15                 
+
+
+**** Interrupt ****
