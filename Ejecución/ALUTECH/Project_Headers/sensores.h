@@ -10,10 +10,20 @@
 
 #include "mytypes.h"
 
-/*
- * u16fnObtenerIluminacion: regresa el valor actual de la iluminacion con valores entre 0 y 65535.
- * return: valor de iluminación real.
+/**
+ * @fn U16 u16fnObtenerIluminacion(void)
+ * @brief Entrega el valor actual de la iluminación ambiental actual con valores entre 0 y 50000.
+ * @param No recibe nada.
+ * @return Valor de iluminación ambiental en tiempo real.
  */
 U16 u16fnObtenerIluminacion(void);
+
+/**
+ * @fn U16 u16fnObtenerTemperatura(void)
+ * @brief Entrega el valor actual de la temperatura con valores entre 0 y 50000.
+ * @param No recibe nada.
+ * @return Valor de temperatura ambiental en tiempo real.
+ */
+U16 u16fnObtenerTemperatura(void);
 
 #endif /* SENSORES_H_ */

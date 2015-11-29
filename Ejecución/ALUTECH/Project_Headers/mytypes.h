@@ -20,6 +20,14 @@
 #define NULL (void*)0
 #endif
 
+#ifndef MAX_VOLTAGE
+#define MAX_VOLTAGE (50000)
+#endif
+
+#ifndef MIN_VOLTAGE
+#define MIN_VOLTAGE (0)
+#endif
+
 /****************************************************************************/
 typedef unsigned char	U08;
 typedef unsigned short	U16;

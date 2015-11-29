@@ -10,14 +10,19 @@
 
 #include "mytypes.h"
 
-/*
- * PWM_vdfnDriverInit: configura el PWM de salida para la alimentación de los LED's.
+/**
+ * @fn void PWM_vdfnDriverInit()
+ * @brief configura el PWM de salida para la alimentación de los LED's.
+ * @param No recibe nada.
+ * @return No retorna nada.
  */
 void PWM_vdfnDriverInit();
 
-/*
- * PWM_vdfnModificarOffset: modifica el offset del PWM para modificar el ancho de pulso.
- * u16Nuevo_offset: nuevo valor deseado del offset.
+/**
+ * @fn void PWM_vdfnModificarOffset(U16 u16Nuevo_offset)
+ * @brief Modifica el offset del PWM para aumentar o disminuir la luminosidad de los LED's.
+ * @param u16Nuevo_offset El nuevo offset del PWM.
+ * @return No retorna nada.
  */
 void PWM_vdfnModificarOffset(U16 u16Nuevo_offset);
 

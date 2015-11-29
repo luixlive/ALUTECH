@@ -1,0 +1,56 @@
+\hypertarget{struct_d_m_a___mem_map}{}\section{D\+M\+A\+\_\+\+Mem\+Map Struct Reference}
+\label{struct_d_m_a___mem_map}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+
+
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_d_m_a___mem_map_aa8b44414dcc95e749d18ce191f6a5c44}{}uint8\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} \mbox{[}256\mbox{]}\label{struct_d_m_a___mem_map_aa8b44414dcc95e749d18ce191f6a5c44}
+
+\item 
+\hypertarget{struct_d_m_a___mem_map_a903117978a09b715e425642bf798772a}{}\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_a9f71dcd898faa75d4e2d1e8cace3882f}{SAR}\\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_ab409d052e7a184d36b412e665a1e079a}{DAR}\\
+\hypertarget{struct_d_m_a___mem_map_1_1_0D3_af31d215f87253f6b569cce99f56381a7}{}\>union \{\\
+\>\>uint32\_t \hyperlink{struct_d_m_a___mem_map_ae7642b2f08448a1bd463111a464f8e46}{DSR\_BCR}\\
+\>\>struct \{\\
+\>\>\>uint8\_t {\bfseries RESERVED\_0} \mbox{[}3\mbox{]}\\
+\>\>\>uint8\_t \hyperlink{struct_d_m_a___mem_map_af59ac6c373e8107836aab76df475a6cd}{DSR}\\
+\>\>\} {\bfseries DMA\_DSR\_ACCESS8BIT}\\
+\>\} \label{struct_d_m_a___mem_map_1_1_0D3_af31d215f87253f6b569cce99f56381a7}
+\\
+\>uint32\_t \hyperlink{struct_d_m_a___mem_map_a86826ed1a54abd232a0ce7a4bc81201b}{DCR}\\
+\} {\bfseries DMA} \mbox{[}4\mbox{]}\label{struct_d_m_a___mem_map_a903117978a09b715e425642bf798772a}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+M\+A -\/ Peripheral register structure 
+
+\subsection{Field Documentation}
+\hypertarget{struct_d_m_a___mem_map_ab409d052e7a184d36b412e665a1e079a}{}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+A\+R@{D\+A\+R}}
+\index{D\+A\+R@{D\+A\+R}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{D\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+A\+R}\label{struct_d_m_a___mem_map_ab409d052e7a184d36b412e665a1e079a}
+Destination Address Register, array offset\+: 0x104, array step\+: 0x10 \hypertarget{struct_d_m_a___mem_map_a86826ed1a54abd232a0ce7a4bc81201b}{}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+C\+R@{D\+C\+R}}
+\index{D\+C\+R@{D\+C\+R}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{D\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+C\+R}\label{struct_d_m_a___mem_map_a86826ed1a54abd232a0ce7a4bc81201b}
+D\+M\+A Control Register, array offset\+: 0x10\+C, array step\+: 0x10 \hypertarget{struct_d_m_a___mem_map_af59ac6c373e8107836aab76df475a6cd}{}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+S\+R@{D\+S\+R}}
+\index{D\+S\+R@{D\+S\+R}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{D\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t D\+S\+R}\label{struct_d_m_a___mem_map_af59ac6c373e8107836aab76df475a6cd}
+D\+M\+A\+\_\+\+D\+S\+R0 register...D\+M\+A\+\_\+\+D\+S\+R3 register., array offset\+: 0x10\+B, array step\+: 0x10 \hypertarget{struct_d_m_a___mem_map_ae7642b2f08448a1bd463111a464f8e46}{}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!D\+S\+R\+\_\+\+B\+C\+R@{D\+S\+R\+\_\+\+B\+C\+R}}
+\index{D\+S\+R\+\_\+\+B\+C\+R@{D\+S\+R\+\_\+\+B\+C\+R}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{D\+S\+R\+\_\+\+B\+C\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t D\+S\+R\+\_\+\+B\+C\+R}\label{struct_d_m_a___mem_map_ae7642b2f08448a1bd463111a464f8e46}
+D\+M\+A Status Register / Byte Count Register, array offset\+: 0x108, array step\+: 0x10 \hypertarget{struct_d_m_a___mem_map_a9f71dcd898faa75d4e2d1e8cace3882f}{}\index{D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}!S\+A\+R@{S\+A\+R}}
+\index{S\+A\+R@{S\+A\+R}!D\+M\+A\+\_\+\+Mem\+Map@{D\+M\+A\+\_\+\+Mem\+Map}}
+\subsubsection[{S\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t S\+A\+R}\label{struct_d_m_a___mem_map_a9f71dcd898faa75d4e2d1e8cace3882f}
+Source Address Register, array offset\+: 0x100, array step\+: 0x10 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+L\+U\+I\+S\+A\+L\+F\+O\+N\+S\+O/\+Documents/\+Git\+Hub/\+A\+L\+U\+T\+E\+C\+H/\+Ejecución/\+A\+L\+U\+T\+E\+C\+H/\+Project\+\_\+\+Headers/\hyperlink{_m_k_l25_z4_8h}{M\+K\+L25\+Z4.\+h}\end{DoxyCompactItemize}

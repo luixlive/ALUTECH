@@ -9,18 +9,13 @@
 #include "derivative.h"
 #include "mytypes.h"
 
-/*
- * ADC_vdfnDriverInit: Funcion que configura y calibra el ADC0 para la recepcion adecuada
- * voltajes análogos.
- * return: 1 si al terminar la configuracion, la calibracion fue exitosa; 0 de otro modo.
- */
 U08 ADC_u08fnDriverInit(){
 	SIM_SCGC6 |= SIM_SCGC6_ADC0_MASK;			/* ADC0 Clock Gate Control (Clock enabled) */
 	
 	ADC0_SC1A &= 0;
 	//ADC0_SC1A |= ADC_SC1_AIEN_MASK;			/* Interrupt Enable (Conversion complete interrupt disabled) */
 	//ADC0_SC1A |= ADC_SC1_DIFF_MASK;			/* Differential Mode Enable (Single-ended conversions and input channels) */
-	ADC0_SC1A |= ADC_SC1_ADCH(0);				/* Input channel select (DADP0 is selected as input) */
+	//ADC0_SC1A |= ADC_SC1_ADCH(0);				/* Input channel select (Default, nor needed yet) */
 	
 	//ADC0_CFG1 |= ADC_CFG1_ADLPC_MASK;			/* Low Power Configuration (Normal Power Configuration) */
 	//ADC0_CFG1 |= ADC_CFG1_ADIV_MASK;			/* Clock Divide Select (Clock rate is input clock) */
@@ -52,14 +47,22 @@ U08 ADC_u08fnDriverInit(){
 	return 1;
 }
 
-U16 ADC_u16fnReadValue(){
-	
-	//TODO NO FUNCIONAL
-	
+U16 ADC_u16fnReadValueIlum(){
+	ADC0_SC1A &= 0;
+	ADC0_SC1A |= ADC_SC1_ADCH(0);
 	static U16 u16UltimoValor = 0;
-	//while ((ADC0_SC1A & ADC_SC1_COCO_MASK) != ADC_SC1_COCO_MASK);
-	u16UltimoValor = ADC0_SC2 & ADC_SC2_ADACT_MASK;
-	u16UltimoValor = ADC0_RA;
 	ADC0_SC1A &= (~ADC_SC1_COCO_MASK);
+	while ((ADC0_SC1A & ADC_SC1_COCO_MASK) != ADC_SC1_COCO_MASK);
+	u16UltimoValor = ADC0_RA;
+	return u16UltimoValor;
+}
+
+U16 ADC_u16fnReadValueTemp(void){
+	ADC0_SC1A &= 0;
+	ADC0_SC1A |= ADC_SC1_ADCH(3);
+	static U16 u16UltimoValor = 0;
+	ADC0_SC1A &= (~ADC_SC1_COCO_MASK);
+	while ((ADC0_SC1A & ADC_SC1_COCO_MASK) != ADC_SC1_COCO_MASK);
+	u16UltimoValor = ADC0_RA;
 	return u16UltimoValor;
 }

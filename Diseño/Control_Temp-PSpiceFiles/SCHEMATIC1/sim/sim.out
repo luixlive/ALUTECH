@@ -1,5 +1,5 @@
 
-**** 11/11/15 16:03:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 11/20/15 22:01:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-sim"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\control_temp-pspicefiles\schematic1\sim.sim ] 
 
@@ -47,13 +47,13 @@ V_V12         0 N12262 9
 V_V13         N12564 0 9
 V_V14         0 N13349 9
 X_D1         N13495 N10553 awb1n4148 PARAMS:                
-V_V15         N14429 0 0.25
+V_V15         N14429 0 0.263
 R_R28         0 N13495  560 TC=0,0 
 
 **** RESUMING sim.cir ****
 .END
 
-**** 11/11/15 16:03:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 11/20/15 22:01:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-sim"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\control_temp-pspicefiles\schematic1\sim.sim ] 
 
@@ -78,7 +78,7 @@ R_R28         0 N13495  560 TC=0,0
            M                                     .18         
 
 
-**** 11/11/15 16:03:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 11/20/15 22:01:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-sim"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\control_temp-pspicefiles\schematic1\sim.sim ] 
 
@@ -116,7 +116,7 @@ R_R28         0 N13495  560 TC=0,0
            D     .87             .87         
 
 
-**** 11/11/15 16:03:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 11/20/15 22:01:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-sim"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\control_temp-pspicefiles\schematic1\sim.sim ] 
 
@@ -131,23 +131,23 @@ R_R28         0 N13495  560 TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N09527)     .1210 (N09617)     .2644 (N09735)    5.0000 (N09877)    -.0144     
+(N09527)     .1275 (N09617)     .2644 (N09735)    5.0000 (N09877)    -.0014     
 
-(N09889)     .1210 (N10491) 6.318E-06 (N10553)    2.5729 (N10650)    9.0000     
+(N09889)     .1275 (N10491) 17.95E-06 (N10553)     .2598 (N10650)    9.0000     
 
-(N12262)   -9.0000 (N12564)    9.0000 (N13349)   -9.0000 (N13495) 561.4E-09     
+(N12262)   -9.0000 (N12564)    9.0000 (N13349)   -9.0000 (N13495) 559.3E-09     
 
-(N14429)     .2500 (X_U5.6) 1.742E-06 (X_U5.7)    -.0157 (X_U5.8)    -.0157     
+(N14429)     .2630 (X_U5.6) 185.7E-09 (X_U5.7)    -.0016 (X_U5.8)    -.0016     
 
-(X_U5.9)    0.0000 (X_U6.6)-243.4E-06 (X_U6.7)    2.5742 (X_U6.8)    2.5742     
+(X_U5.9)    0.0000 (X_U6.6)-24.57E-06 (X_U6.7)     .2599 (X_U6.8)     .2599     
 
-(X_U6.9)    0.0000 (X_U5.10)    -.4867                   (X_U5.11)    8.9603    
+(X_U6.9)    0.0000 (X_U5.10)    -.4802                   (X_U5.11)    8.9603    
 
-(X_U5.12)    8.9603                   (X_U5.13)    -.4728                       
+(X_U5.12)    8.9603                   (X_U5.13)    -.4663                       
 
-(X_U5.14)    -.4728                   (X_U5.53)    8.0000                       
+(X_U5.14)    -.4663                   (X_U5.53)    8.0000                       
 
-(X_U5.54)   -8.0000                   (X_U5.90)    -.0270                       
+(X_U5.54)   -8.0000                   (X_U5.90)    -.0038                       
 
 (X_U5.91)   40.0000                   (X_U5.92)  -40.0000                       
 
@@ -159,7 +159,7 @@ R_R28         0 N13495  560 TC=0,0
 
 (X_U6.53)    8.0000                   (X_U6.54)   -8.0000                       
 
-(X_U6.90)     .0257                   (X_U6.91)   40.0000                       
+(X_U6.90)     .0026                   (X_U6.91)   40.0000                       
 
 (X_U6.92)  -40.0000                   (X_U6.99)    0.0000                   
 
@@ -174,19 +174,19 @@ R_R28         0 N13495  560 TC=0,0
     V_V12       -1.006E-03
     V_V13       -1.006E-03
     V_V14       -1.006E-03
-    V_V15       -1.290E-06
-    X_U5.vb      1.742E-11
-    X_U5.vc      8.015E-12
-    X_U5.ve      7.987E-12
-    X_U5.vlim   -2.700E-05
-    X_U5.vlp    -4.003E-11
-    X_U5.vln    -3.998E-11
-    X_U6.vb     -2.434E-09
-    X_U6.vc      5.428E-12
-    X_U6.ve      1.057E-11
-    X_U6.vlim    2.573E-05
-    X_U6.vlp    -3.998E-11
-    X_U6.vln    -4.003E-11
+    V_V15       -1.355E-06
+    X_U5.vb      1.857E-12
+    X_U5.vc      8.002E-12
+    X_U5.ve      8.000E-12
+    X_U5.vlim   -3.807E-06
+    X_U5.vlp    -4.000E-11
+    X_U5.vln    -4.000E-11
+    X_U6.vb     -2.457E-10
+    X_U6.vc      7.741E-12
+    X_U6.ve      8.261E-12
+    X_U6.vlim    2.599E-06
+    X_U6.vlp    -4.000E-11
+    X_U6.vln    -4.001E-11
 
     TOTAL POWER DISSIPATION   3.86E-02  WATTS
 
@@ -194,7 +194,7 @@ R_R28         0 N13495  560 TC=0,0
 
           JOB CONCLUDED
 
-**** 11/11/15 16:03:44 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+**** 11/20/15 22:01:23 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
 
  ** Profile: "SCHEMATIC1-sim"  [ C:\Users\LUISALFONSO\Documents\GitHub\ALUTECH\Diseño\control_temp-pspicefiles\schematic1\sim.sim ] 
 
@@ -206,5 +206,5 @@ R_R28         0 N13495  560 TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .08
+  Total job time (using Solver 1)   =         .13
 

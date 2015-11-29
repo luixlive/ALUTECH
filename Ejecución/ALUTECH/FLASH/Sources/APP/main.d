@@ -15,7 +15,8 @@ Sources/APP/main.o: ../Sources/APP/main.c \
  C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/mytypes.h \
  C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/sensores.h \
  C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/mytypes.h \
- C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/actuadores.h
+ C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/actuadores.h \
+ C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/pantallaLCD.h
 
 C:/Freescale/CW\ MCU\ v10.6/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -50,3 +51,5 @@ C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/
 C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/mytypes.h:
 
 C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/actuadores.h:
+
+C:/Users/LUISALFONSO/Documents/GitHub/ALUTECH/Ejecución/ALUTECH/Project_Headers/pantallaLCD.h:
